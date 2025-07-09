@@ -1,14 +1,27 @@
 import Link from "next/link";
-import { getProduct } from "@/app/data/product";
+import { getProduct } from "@/app/lib/products";
 
-export default async function Page({params,}:{params: {uid: number}}){
+type PageProps = {
+    params: { uid: string };
+}
 
-    const product = await getProduct(params.uid);
+export default async function Page({params,}: PageProps){
+    const uid = parseInt(params.uid, 10);
+    const product = await getProduct(uid);
 
+    if (!product) {
+        return (
+            <>
+                <p>Produkt wurde nicht gefunden.</p>
+            </>
+        );
+    }
 
     return (
         <>
-        <Link href={`/downloads/${product.uid}.pdf`}>{product.name}</Link>
+        <h1>{product.name}</h1>
+        <h2>{product.uid}</h2>
+        <Link href={`/downloads/db_${product.uid}`} download>Datenblatt download</Link>
         </>
     );
 }

@@ -1,0 +1,30 @@
+[
+  {
+    "uid": 12345678,
+    "name": "Testprodukt 1"
+  },
+  {
+    "uid": 87654321,
+    "name": "Testprodukt 2"
+  },
+  {
+    "uid": 87654322,
+    "name": "Testprodukt 3"
+  },
+  {
+    "uid": 87654323,
+    "name": "Testprodukt 4"
+  },
+  {
+    "uid": 87654324,
+    "name": "Testprodukt 5"
+  },
+  {
+    "uid": 87654325,
+    "name": "Testprodukt 6"
+  },
+  {
+    "uid": 87654326,
+    "name": "Testprodukt 7"
+  }
+]
