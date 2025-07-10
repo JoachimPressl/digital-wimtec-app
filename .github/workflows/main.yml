@@ -5,7 +5,7 @@ on:
 
 jobs:
   run_pull:
-    name: run pull
+    name: run pull 2
     runs-on: ubuntu-latest
 
     steps:
