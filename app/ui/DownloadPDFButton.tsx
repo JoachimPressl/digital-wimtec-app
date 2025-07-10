@@ -9,7 +9,7 @@ export default function DownloadPDFButton({ uid }: { uid: string }) {
     useEffect(() => {
         const checkFile = async () => {
             try {
-                const res = await fetch(`/produktdaten/${uid}.pdf`, {
+                const res = await fetch(`/produktdaten/MA_${uid}_WimTec.pdf`, {
                     method: "HEAD",
                 });
                 setExists(res.ok);
@@ -23,7 +23,7 @@ export default function DownloadPDFButton({ uid }: { uid: string }) {
     if (!exists) {
         return <p>Kein PDF-Dokument gefunden</p>;
     } else {
-        return <Link href={`/produktdaten/${uid}.pdf`} download>Download PDF</Link>;
+        return <Link href={`/produktdaten/MA_${uid}_WimTec.pdf`} download>Download PDF</Link>;
     }
     
 }
