@@ -1,30 +1,30 @@
 [
   {
-    "uid": 12345678,
-    "name": "Testprodukt 1"
+    "uid": "138153-01",
+    "name": "WimTec SMART E10 - HyPlus PRO 12 V"
   },
   {
-    "uid": 87654321,
+    "uid": "87654321",
     "name": "Testprodukt 2"
   },
   {
-    "uid": 87654322,
+    "uid": "87654322",
     "name": "Testprodukt 3"
   },
   {
-    "uid": 87654323,
+    "uid": "87654323",
     "name": "Testprodukt 4"
   },
   {
-    "uid": 87654324,
+    "uid": "87654324",
     "name": "Testprodukt 5"
   },
   {
-    "uid": 87654325,
+    "uid": "87654325",
     "name": "Testprodukt 6"
   },
   {
-    "uid": 87654326,
+    "uid": "87654326",
     "name": "Testprodukt 7"
   }
 ]
