@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_pull:
+    name: run pull
+    runs-on: ubunti-latest
+
+    steps:
+    - name: connect
+      run: ssh ${{ secrets.SSH_USER}}@{{ secrets.SSH_HOST }}
+    - name: enter password
+      run: ${{secrets.SSH_PASS}}
+    - name: pull git
+      run: git checkout ${{secrets.WORK_DIR}} && git push
+    - name: cleanup
+      run: rm -rf ~/.ssh
+      
