@@ -1,28 +1,18 @@
-import Link from "next/link";
-import { getProduct } from "@/app/lib/data";
+import DownloadPDFButton from "../ui/DownloadPDFButton";
+import DownloadSVGButton from "../ui/DownloadSVGButton";
 
 export default async function Page(props: { params: Promise<{ uid: string}>}){
     const params = await props.params;
     const uid = params.uid;
-    const product = await getProduct(uid);
-
-    if (!product) {
-        return <p>Produkt wurde nicht gefunden.</p>;
-    }
 
     return (
         <div>
-            <div>
-                <h1 className="text-3xl">{product.name}</h1>
+            <div className="text-center">
+                <h1 className="text-3xl">{uid}</h1>
             </div>
-            <div>
-                <h2 className="font-bold">{product.uid}</h2>
-            </div>
-            <div className="mt-4">
-                <Link href={`/produktdaten/WimTec_${product.uid}_DB.pdf`} className="btn-primary" download>Datenblatt</Link>
-            </div>
-            <div className="mt-4">
-                <Link href={`/produktdaten/WimTec_${product.uid}_MA.pdf`} className="btn-primary" download>Montageanleitung</Link>
+            <div className="mt-4 text-center">
+                <DownloadPDFButton uid={uid}/>
+                <DownloadSVGButton uid={uid}/>
             </div>
         </div>
     );
