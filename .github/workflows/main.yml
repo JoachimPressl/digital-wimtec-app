@@ -6,7 +6,7 @@ on:
 jobs:
   run_pull:
     name: run pull
-    runs-on: ubunti-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: connect
@@ -14,7 +14,7 @@ jobs:
     - name: enter password
       run: ${{secrets.SSH_PASS}}
     - name: pull git
-      run: git checkout ${{secrets.WORK_DIR}} && git push
+      run: cd ${{ secrets.WORK_DIR }} && git checkout ${{secrets.WORK_DIR}} && git push
     - name: cleanup
       run: rm -rf ~/.ssh
       
