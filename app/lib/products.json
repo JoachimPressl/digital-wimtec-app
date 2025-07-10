@@ -1,30 +1,13 @@
 [
   {
-    "uid": "138153-01",
-    "name": "WimTec SMART E10 - HyPlus PRO 12 V"
-  },
-  {
-    "uid": "87654321",
-    "name": "Testprodukt 2"
-  },
-  {
-    "uid": "87654322",
-    "name": "Testprodukt 3"
-  },
-  {
-    "uid": "87654323",
-    "name": "Testprodukt 4"
-  },
-  {
-    "uid": "87654324",
-    "name": "Testprodukt 5"
-  },
-  {
-    "uid": "87654325",
-    "name": "Testprodukt 6"
-  },
-  {
-    "uid": "87654326",
-    "name": "Testprodukt 7"
+    "product_no": 139044,
+    "uid": "139044-01",
+    "name": "WimTec PROOF TB - HyPlus PRO 230 V",
+    "family": "WimTec PROOF TB",
+    "teaser": "Elektronikmodul, Magnetventil mit Kabelverlängerung, Temperatursensor, Edelstahltaster, Infrarotsensor, Magnetstift und EB Netzteil.",
+    "description": "Trinkbrunnen-Steuerungsset zur individuellen Montage in bestehende oder neu zu errichtende Trinkbrunnen, mit temperaturgesteuerter Freispül-Automatik für Netzbetrieb.",
+    "color": "Edelstahl",
+    "imagegray": "351561___139044_WTB_WimTec_Proof_TB_2025_f2f2f2.jpg",
+    "imagewhite": "351561___139044_WTB_WimTec_Proof_TB_2025_ffffffff.jpg"
   }
 ]

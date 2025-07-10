@@ -15,7 +15,7 @@ export default async function Table({query}: {query: string;}) {
             {products.map(product => (
                 <div key={product.uid} className="flex bg-white border-2 border-gray-200 rounded-2xl my-2 p-5 align-middle">
                     <div className="p-4">
-                        <Image src="/globe.svg" alt="Produktbild" width={150} height={150}/>
+                        <Image src={`https://www.wimtec.com/fileadmin/product_upload/media/${product.imagewhite}`} alt="Produktbild" width={150} height={150}/>
                     </div>
                     <div className="ms-10 inline-block align-middle">
                         <div className="text-2xl font-bold">
