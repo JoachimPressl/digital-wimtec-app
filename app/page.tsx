@@ -1,18 +1,14 @@
-import Link from "next/link";
-import { getAllProducts } from "./lib/data";
 import Search from "./ui/Search";
 import Table from "./ui/Table";
 
 export default async function Page(props: {
   searchParams?: Promise<{
     query?: string;
-    page?: string;
   }>;
 }) {
 
   const searchParams = await props.searchParams;
   const query = searchParams?.query || '';
-  const currentPage = Number(searchParams?.page) || 1;
 
   return (
     <>
@@ -25,7 +21,6 @@ export default async function Page(props: {
         </div>
         <Table query={query}/>
         <div className="mt-5 flex w-full justify-center">
-          {/* <Pagination totalPages={totalPages} /> */}
         </div>
       </div>
     </>
