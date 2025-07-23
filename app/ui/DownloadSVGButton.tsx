@@ -14,6 +14,7 @@ export default function DownloadPDFButton({ uid }: { uid: string }) {
                 });
                 setExists(res.ok);
             } catch (err) {
+                console.log(err);
                 setExists(false);
             }
         };
