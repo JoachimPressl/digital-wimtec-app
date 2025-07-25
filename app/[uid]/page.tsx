@@ -7,7 +7,7 @@ export default async function Page(props: { params: Promise<{ uid: string}>}){
     return (
         <div>
             <div className="text-center">
-                <h1 className="text-3xl">{uid}</h1>
+                <h1 className="text-3xl font-extralight text-wimtec-darkgrey">{uid}</h1>
             </div>
             <div className="mt-4 text-center">
                 <DownloadPDFButton uid={uid}/>

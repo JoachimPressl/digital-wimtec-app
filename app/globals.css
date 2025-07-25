@@ -1,28 +1,25 @@
 @import "tailwindcss";
+@import url("https://use.typekit.net/wlh3uot.css");
+
+@theme {
+    --color-wimtec-orange: #f59c00;
+    --color-wimtec-darkgrey: #57595A;
+    --color-wimtec-grey: #4d5256;
+    --color-wimtec-lightgrey: #f2f2f2;
+
+    --font-sans: trasandina;
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-book: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700; 
+}
+
 
 .btn {
-    @apply text-center px-3 py-2 relative;
+    @apply text-center px-4 py-3 text-sm transition;
 }
 .btn-primary {
-    @apply text-white bg-[#f59c00] hover:bg-[#4d5256];
-}
-.btn-secondary {
-    @apply font-bold;
-}
-
-.btn::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-75px, -50%);
-    display: block;
-    width: 65px;
-    height: 20px;
-    padding-left: 14px;
-
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-image: url('https://www.wimtec.com/typo3conf/ext/theme/Resources/Public/Icons/pfeil-lang-white.svg');
+    @apply text-white bg-wimtec-orange hover:bg-wimtec-grey;
 }

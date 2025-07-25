@@ -1,5 +1,6 @@
 'use client'
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react"
 
@@ -23,9 +24,9 @@ export function DownloadPDFButton({ uid }: { uid: string }) {
     }, [uid]);
 
     if (!exists) {
-        return <div className="btn"><p>Kein PDF-Dokument gefunden</p></div>;
+        return null;
     } else {
-        return <Link href={`/produktdaten/MA_${uid}_WimTec.pdf`} className="btn btn-primary" download>Download PDF</Link>;
+        return <DownloadButton file={`/produktdaten/MA_${uid}_WimTec.pdf`} />;
     }
 }
 
@@ -49,8 +50,17 @@ export function DownloadSVGButton({ uid }: { uid: string }) {
     }, [uid]);
 
     if (!exists) {
-        return <div className="btn"><p>Kein SVG-Dokument gefunden</p></div>;
+        return null;
     } else {
-        return <Link href={`/produktdaten/${uid}.svg`} className="btn btn-primary" download>Download SVG</Link>;
+        return <DownloadButton file={`/produktdaten/${uid}.svg`} />;
     } 
+}
+
+export function DownloadButton({file}: {file: string}){
+    return (
+        <Link href={file} className="btn btn-primary inline-flex">
+            Download
+            <Image src="https://www.wimtec.com/typo3conf/ext/theme/Resources/Public/Icons/pfeil-lang-white.svg" width={"65"} height={20} alt="Arrow" className="ms-2" />
+        </Link>
+    );
 }
